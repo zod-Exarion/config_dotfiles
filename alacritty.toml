@@ -1,0 +1,63 @@
+import = [
+"~/.config/alacritty/themes/themes/coolnight.toml"
+]
+
+live_config_reload = true 
+
+[shell]
+program = "/bin/zsh"
+args = ["-1"]
+
+[window]
+opacity = 0.01
+blur = true
+
+padding.x = 15
+padding.y = 15
+
+decorations = "None"
+decorations_theme_variant = "Dark"
+
+startup_mode = "Fullscreen"
+
+[scrolling]
+history=500
+multiplier = 4 
+
+[font]
+normal = {family="JetBrainsMono NerdFont Mono",style="Regular"}
+bold = {family="JetBrainsMono NerdFont Mono",style="Bold"}
+italic = {family="JetBrainsMono NerdFont Mono",style="Italic"}
+size = 13 
+offset = {x=1,y=3}
+
+# [colors]
+# draw_bold_text_with_bright_colors = true
+
+# [colors.primary]
+# foreground = "#039BA3"
+# background = "#000000"
+# bright_foreground = "#07F02E"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+thickness = 0.10
+
+[terminal]
+osc52 = "CopyPaste"
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+{key="PageUp", action="ScrollHalfPageUp"},
+{key="PageUp", mods="Control",action="ScrollPageUp"},
+{key="PageDown", action="ScrollHalfPageDown"},
+{key="PageDown", mods="Control", action="ScrollPageDown"},
+{key="Home", mods="Control", action="ScrollToTop"}, 
+{key="N", mods="Control|Shift", action="CreateNewWindow"},
+{key="C", mods="Command", action="Copy"}
+]
