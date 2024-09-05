@@ -1,13 +1,14 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+~/scripts/startup.sh
+
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+fi
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -25,16 +26,23 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-#command shorthands and shit 
-alias ls="eza --long --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --long --icons=always --no-time --no-user --no-permissions --tree --level=2"
 alias lsa="ls -a"
+alias cat="bat"
 alias cd="z"
+alias f="fzf -m -e"
+alias bonsai="cbonsai -l -L 50"
+alias run="/home/rajubiri/.config/rofi/launchers/type-2/launcher.sh"
+alias app="/home/rajubiri/.config/rofi/applets/bin/apps.sh"
+alias media="/home/rajubiri/.config/rofi/applets/bin/mpd.sh"
+alias links="/home/rajubiri/.config/rofi/applets/bin/quicklinks.sh"
+alias vol="/home/rajubiri/.config/rofi/applets/bin/volume.sh"
+alias pow="/home/rajubiri/.config/rofi/powermenu/type-2/powermenu.sh"
 
-
-#zoxide 
+#plugins 
 eval "$(zoxide init zsh)"
-
-#fzf
 eval "$(fzf --zsh)"
+eval $(thefuck --alias)
+
+EDITOR='nvim'
 
