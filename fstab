@@ -1,0 +1,15 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/mapper/ainstnvme0n1p2
+UUID=040ed65e-efa9-42b3-b3ae-330e043e0ff5	/         	ext4      	rw,relatime	0 1
+
+# /dev/nvme0n1p1
+UUID=61F9-B312      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+UUID=C69C8D549C8D4043   /home/rajubiri/Storage/hdd1   ntfs-3g   rw    0    0 
+
+UUID=E606F59306F56549   /home/rajubiri/Storage/hdd2   ntfs-3g   rw    0    0 
+
+/swapfile none swap defaults 0 0
