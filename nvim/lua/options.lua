@@ -8,16 +8,16 @@ o.completeopt = {'menu','menuone','noselect'}
 o.mouse = 'a'
 
 -- tabs 
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
+o.tabstop = 4
+o.softtabstop = 4
+o.shiftwidth = 4
 o.expandtab = true
 o.autoindent = true
 
 -- ui 
 o.number = true
 o.relativenumber = true
-o.wrap = true
+o.wrap = false
 o.cursorline = true
 o.splitbelow = true
 o.splitright = true
