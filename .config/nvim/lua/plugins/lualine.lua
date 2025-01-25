@@ -5,7 +5,7 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = 'nightfly'
+        theme = 'iceberg_dark'
       }
     })
   end

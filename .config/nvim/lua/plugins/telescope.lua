@@ -9,7 +9,8 @@ return {
 
       k('n', '<C-p>', builtin.find_files,{})
       k('n', '<leader>g', builtin.live_grep,{})
-      k('n', '<leader>th', builtin.colorscheme,{})
+      k('n', '<leader>ac', builtin.commands,{})
+      k('n', '<leader>ts', '<CMD>Telescope<CR>')
 
       require('telescope').setup({
         defaults={
@@ -23,6 +24,7 @@ return {
       })
     end
   },
+
   {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function ()
