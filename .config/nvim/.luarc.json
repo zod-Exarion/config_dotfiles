@@ -1,9 +1,0 @@
-{
-    "diagnostics.globals": [
-        "vim",
-        "bufopts"
-    ],
-    "diagnostics.disable": [
-        "undefined-doc-name"
-    ]
-}
