@@ -1,0 +1,8 @@
+return {
+	"mbbill/undotree",
+	config = function()
+		-- require("undotree").setup({
+		-- })
+		vim.keymap.set("n", "<leader>u", "<CMD>UndotreeToggle<CR>")
+	end,
+}
